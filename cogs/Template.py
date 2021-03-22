@@ -7,7 +7,7 @@ class Template(commands.Cog):
 
     # @commands.command(hidden=True)
     # async def command(self, ctx):
-    #     pass  
+    #     pass
 
 def setup(client):
     client.add_cog(Template(client))

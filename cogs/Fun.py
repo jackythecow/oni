@@ -1,4 +1,4 @@
-import discord
+import discord 
 from discord.ext import commands
 
 import random
@@ -13,6 +13,8 @@ class Fun(commands.Cog):
                      "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good",
                     "Very Doubtful"]
         
+    def _get_id_match(self):
+        return self._id_regex.match(self.argument)
 
     @commands.command(aliases=['dice'])
     async def roll(self, ctx, *, integer=6):

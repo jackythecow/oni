@@ -8,7 +8,7 @@ class Help(commands.Cog):
         self.listCogs = ['Code',
                          'Dev', 'Fun',
                          'Help', 'Images',
-                         'Management', 'Message',
+                         'Management',
                          'Music', 'Stocks',
                          ]
 

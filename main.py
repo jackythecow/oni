@@ -4,6 +4,7 @@ from discord.ext import commands
 from asyncio import sleep
 import sqlite3
 import aiohttp
+# from web_server import online
 
 def get_prefix(client, message):
     db = sqlite3.connect("main.sqlite")
@@ -88,4 +89,5 @@ for filename in os.listdir('./cogs'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
 if __name__ == "__main__":
+    # online()
     client.run(os.environ.get('TOKEN'))
