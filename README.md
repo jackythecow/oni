@@ -4,7 +4,8 @@
 A discord bot written in python using the [discord.py](https://github.com/Rapptz/discord.py) API wrapper.
 
 ## Extensions ``"TODO LIST"``
-### Audio ``TESTING`` ``WIP``
+`Suggestions appreciated`
+### Audio ``TESTING``
 Audio playback functionality
 ### Fun ``WIP``
 Basic miscellaneous commands
