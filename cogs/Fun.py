@@ -29,16 +29,17 @@ class Fun(commands.Cog):
     @commands.command(aliases=['8b', '8ball'])
     async def eightball(self, ctx, *, question):
         """`8ball [question]` gives an answer to a question"""
-        
-        
         await ctx.send(
             f"```Question: {question}\nAnswer: {random.choice(self.responses)}```")
 
     @commands.command(aliases=['coin'])
-    async def flip(self, ctx):
+    async def flip(self, ctx, amount=1):
         """`flip` flips a coin"""
+        if amount > 5:
+            amount = 5
         possible_responses = ["heads", "tails"]
-        await ctx.send(f"> {ctx.author.mention} flipped `{random.choice(possible_responses)}`")
+        for i in range(amount):
+            await ctx.send(f"> {ctx.author.mention} flipped `{random.choice(possible_responses)}`")
 
     @commands.command(aliases=['pfp'])
     async def profilepicture(self, ctx):
