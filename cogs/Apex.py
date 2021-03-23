@@ -3,6 +3,7 @@ import discord
 
 from aiohttp import request
 import os
+import json
 
 def nextrank(score):
     #Masters+
@@ -29,6 +30,16 @@ def nextrank(score):
 class Apex(commands.Cog):
     def __init__(self, client):
         self.client = client
+        with open('data/weapons.txt') as file:
+            self.weapon = json.load(file)
+        self.color = {
+            "Energy":[0x636f1d,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/2/2d/Energy_Ammo.svg/revision/latest/scale-to-width-down/256?cb=20190827163648"],
+            "Heavy":[0x376654,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/55/Heavy_Rounds.svg/revision/latest/scale-to-width-down/254?cb=20190827144859"],
+            "Unique":[0xcb003c,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/7/7f/Supply_Drop_Sniper_Ammo.svg/revision/latest/scale-to-width-down/273?cb=20200819185728"],
+            "Light":[0xf49b49,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/a/a5/Light_Rounds.svg/revision/latest/scale-to-width-down/254?cb=20190827144754"],
+            "Shotgun":[0x831600,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/42/Shotgun_Shells.svg/revision/latest/scale-to-width-down/254?cb=20190827163750"],
+            "Sniper":[0x7c80fb,"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/3e/Sniper_Ammo.svg/revision/latest/scale-to-width-down/256?cb=20200207225134"]
+        }
 
     async def getdata(self, ctx, URL):
         async with request("GET", URL) as response: #, headers={'TRN-Api-Key': os.getenv('APEX')}) as response:
@@ -57,6 +68,36 @@ class Apex(commands.Cog):
         
         embed.set_footer(text=f"Level {data['global']['level']} ({data['global']['toNextLevelPercent']}%)")
         await ctx.send(embed=embed)
+
+    @commands.command(aliases=['wep','weap'])
+    async def weapon(self, ctx, weapon=None):
+        """`weapon <weapon>` return weapon stats."""
+        if not weapon:
+            all=""
+            embed=discord.Embed(title="Apex Legends Weapon List", color=0xcdcfbb)
+            for category in self.weapon:
+                for name in self.weapon[category]:
+                    all += self.weapon[category][name]['displayName']+f" `{name}`"+"\n"
+                embed.add_field(name=f"{category}", value=f"{all}", inline=False)
+                all = ""
+            await ctx.send(embed=embed)
+
+        else:
+            weapon = weapon.capitalize()
+            for category in self.weapon:
+                if weapon in self.weapon[category]:
+                    type = category
+                    data = self.weapon[category][weapon]
+                    
+                    embed=discord.Embed(title=f"{data['displayName']}", color=self.color[data['ammoType']][0]) #description=f"{data['ammoType']}",)
+                    embed.set_author(name=f"{type}", icon_url=self.color[data['ammoType']][1])
+                    embed.set_image(url=f"{data['imgUrl']}")
+                    embed.add_field(name="Damage", value=f"`{data['damage']}`", inline=False)
+                    embed.add_field(name="Magazine Size", value=f"`{data['magSize']}`", inline=True)
+                    embed.add_field(name="Reload Speed", value=f"`{data['reload']}`", inline=True)
+                    embed.add_field(name="RPM", value=f"`{data['RPM']}`", inline=True)
+                    await ctx.send(embed=embed)
+                    break;
 
     
 def setup(client):
