@@ -8,7 +8,7 @@
             "RPM":"140",
             "magSize":"6/8/10/12",
             "reload":"0.6s/shot",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/5c/30-30_Repeater_Icon.png/revision/latest?cb=20210203022942"
         },
         "G7":{
             "displayName":"G7 Scout",
@@ -17,25 +17,25 @@
             "RPM":"240",
             "magSize":"10/15/18/20",
             "reload":"2.4s/3.0s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/8/8d/G7_Scout_Icon.png/revision/latest?cb=20190906030044"
         },
         "Havoc":{
-            "displayName":"Havoc",
+            "displayName":"HAVOC Rifle",
             "ammoType":"Energy",
             "damage":"18/36/14",
             "RPM":"672",
             "magSize":"24/28/32/36",
             "reload":"3.2s/3.2s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/64/Havoc_Icon.png/revision/latest?cb=20190906030054"
         },
         "Hemlok":{
-            "displayName":"Hemlok",
+            "displayName":"Hemlok Burst AR",
             "ammoType":"Heavy",
             "damage":"20/35/15",
             "RPM":"643",
             "magSize":"18/24/27/30",
             "reload":"2.4s/2.85s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Hemlok_Icon.png/revision/latest?cb=20190906030113"
         },
         "R301":{
             "displayName":"R-301 Carbine",
@@ -44,7 +44,7 @@
             "RPM":"816",
             "magSize":"18/20/25/28",
             "reload":"2.4s/3.2s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/1b/R-301_Icon.png/revision/latest?cb=20190906030325"
         },
         "Flatline":{
             "displayName":"VK-47 Flatline",
@@ -60,71 +60,71 @@
     "SMG":
     {
         "Alternator":{
-            "displayName":"Alternator",
+            "displayName":"Alternator SMG",
             "ammoType":"Light",
             "damage":"16/24/13",
             "RPM":"600",
             "magSize":"19/22/25/27",
             "reload":"1.9s/2.23s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/a/a1/Alternator_Icon.png/revision/latest?cb=20190906025909"
         },
         "Prowler":{
-            "displayName":"Prowler",
+            "displayName":"Prowler Burst PDW",
             "ammoType":"Unique",
             "damage":"15/23/12",
             "RPM":"800",
             "magSize":"35",
             "reload":"2.0s/2.6s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/2/2d/Prowler_Icon.png/revision/latest?cb=20190906030306"
         },
         "R99":{
-            "displayName":"R-99",
+            "displayName":"R-99 SMG",
             "ammoType":"Light",
             "damage":"11/17/9",
             "RPM":"1,080",
             "magSize":"20/22/24/27",
             "reload":"1.8s/2.45s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/1b/R-99_Icon.png/revision/latest?cb=20190906030316"
         },
         "Volt":{
-            "displayName":"Volt",
+            "displayName":"Volt SMG",
             "ammoType":"Energy",
             "damage":"15/23/12",
             "RPM":"720",
             "magSize":"19/21/23/26",
             "reload":"1.6s/2.25s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/a/aa/Volt_Icon.png/revision/latest?cb=20190906030400"
         }
     },
 
     "LMG":
     {
         "Devotion":{
-            "displayName":"Devotion",
+            "displayName":"Devotion LMG",
             "ammoType":"Energy",
             "damage":"16/32/14",
             "RPM":"900",
             "magSize":"36/40/44/48",
             "reload":"2.8s/3.63s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/5f/Devotion_Icon.png/revision/latest?cb=20190906030012"
         },
         "Lstar":{
-            "displayName":"L-Star",
+            "displayName":"L-STAR EMG",
             "ammoType":"Energy",
             "damage":"18/36/14",
             "RPM":"600",
             "magSize":"Gauge",
             "reload":"1.15s/2.45s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/8/87/L-Star_Icon.png/revision/latest?cb=20190906030149"
         },
         "Spitfire":{
-            "displayName":"Spitfire",
+            "displayName":"M600 Spitfire",
             "ammoType":"Heavy",
             "damage":"19/38/14",
             "RPM":"540",
             "magSize":"35/40/45/55",
             "reload":"3.2s/3.8s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f9/Spitfire_Icon.png/revision/latest?cb=20190906030341"
         }
     },
 
@@ -137,25 +137,25 @@
             "RPM":"30",
             "magSize":"8",
             "reload":"3.6s/3.6s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Charge_Rifle_Icon.png/revision/latest?cb=20190906025957"
         },
         "Kraber":{
-            "displayName":"Kraber .50-Cal",
+            "displayName":"Kraber .50-Cal Sniper",
             "ammoType":"Unique",
             "damage":"145/435/116",
             "RPM":"36",
             "magSize":"4",
             "reload":"3.2s/4.3s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b6/Kraber_Icon.png/revision/latest?cb=20190906030122"
         },
         "Longbow":{
-            "displayName":"Longbow",
+            "displayName":"Longbow DMR",
             "ammoType":"Sniper",
             "damage":"55/110/44",
             "RPM":"86",
             "magSize":"6/8/10/12",
             "reload":"2.66s/3.66s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0c/Longbow_Icon.png/revision/latest?cb=20190906030133"
         },
         "Sentinel":{
             "displayName":"Sentinel",
@@ -164,7 +164,7 @@
             "RPM":"37.5",
             "magSize":"4/5/6/7",
             "reload":"2.5s/3.6s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/56/Sentinel_Icon.png/revision/latest?cb=20200205024357"
         },
         "Tripletake":{
             "displayName":"Triple Take",
@@ -173,20 +173,20 @@
             "RPM":"72",
             "magSize":"6/7/8/9",
             "reload":"2.6s/3.4s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e1/Triple_Take_Icon.png/revision/latest?cb=20190906030351"
         }
     },
 
     "Shotgun":
     {
         "Eva8":{
-            "displayName":"EVA-8",
+            "displayName":"EVA-8 Auto",
             "ammoType":"Shotgun",
             "damage":"63/99/63",
             "RPM":"126",
             "magSize":"8",
             "reload":"2.75s/3.0s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/6c/Eva-8_Icon.png/revision/latest?cb=20190906030024"
         },
         "Peacekeeper":{
             "displayName":"Peacekeeper",
@@ -195,25 +195,25 @@
             "RPM":"58",
             "magSize":"5",
             "reload":"2.45s/3.35s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/7/71/Peacekeeper_Icon.png/revision/latest?cb=20190906030256"
         },
         "Mastiff":{
-            "displayName":"Mastiff",
+            "displayName":"Mastiff Shotgun",
             "ammoType":"Shotgun",
             "damage":"88/112/88",
             "RPM":"66",
             "magSize":"6",
             "reload":"1.03s/1.7s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9d/Mastiff_Icon.png/revision/latest?cb=20190906030212"
         },
         "Mozambique":{
-            "displayName":"Mozambique",
+            "displayName":"Mozambique Shotgun",
             "ammoType":"Shotgun",
             "damage":"45/69/42",
             "RPM":"180",
             "magSize":"4",
             "reload":"2.1s/2.6s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/de/Mozambique_Icon.png/revision/latest?cb=20190906030236"
         }
     },
 
@@ -226,16 +226,16 @@
             "RPM":"430",
             "magSize":"12/14/16/18",
             "reload":"1.25s/1.25s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/61/P2020_Icon.png/revision/latest?cb=20190906030246"
         },
         "Re45":{
-            "displayName":"RE-45",
+            "displayName":"RE-45 Auto",
             "ammoType":"Light",
             "damage":"12/18/11",
             "RPM":"750",
             "magSize":"16/19/22/25",
             "reload":"1.5s/1.95s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/bb/Re-45_Icon.png/revision/latest?cb=20190906030333"
         },
         "Wingman":{
             "displayName":"Wingman",
@@ -244,7 +244,7 @@
             "RPM":"156",
             "magSize":"6/7/8/9",
             "reload":"2.1s/2.1s",
-            "imgUrl":""
+            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/35/Wingman_Icon.png/revision/latest?cb=20190906030408"
         }
     }
 }
