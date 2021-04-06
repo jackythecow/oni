@@ -14,8 +14,8 @@ class Osu(commands.Cog):
         if username != "" and username is not None:
             try:
                 cursor.execute("""
-                    INSERT OR REPLACE INTO osuid(author_id,osu_id) VALUES (?,?)
-                """,(authorid,username))
+                    INSERT OR REPLACE INTO osuid(author_id, osu_id) VALUES (?,?)
+                """,(authorid, username))
                 await ctx.send(f"> Successfully set osu! username to `{username}`")
             except:
                 await ctx.send(f"> Could not set osu! username to `{username}`")
