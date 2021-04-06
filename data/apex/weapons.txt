@@ -8,7 +8,7 @@
             "RPM":"140",
             "magSize":"6/8/10/12",
             "reload":"0.6s/shot",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/5c/30-30_Repeater_Icon.png/revision/latest?cb=20210203022942"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784175321448448/3030.png"
         },
         "G7":{
             "displayName":"G7 Scout",
@@ -17,7 +17,7 @@
             "RPM":"240",
             "magSize":"10/15/18/20",
             "reload":"2.4s/3.0s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/8/8d/G7_Scout_Icon.png/revision/latest?cb=20190906030044"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784131294232626/g7.png"
         },
         "Havoc":{
             "displayName":"HAVOC Rifle",
@@ -26,7 +26,7 @@
             "RPM":"672",
             "magSize":"24/28/32/36",
             "reload":"3.2s/3.2s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/64/Havoc_Icon.png/revision/latest?cb=20190906030054"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784128861405184/havoc.png"
         },
         "Hemlok":{
             "displayName":"Hemlok Burst AR",
@@ -35,7 +35,7 @@
             "RPM":"643",
             "magSize":"18/24/27/30",
             "reload":"2.4s/2.85s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Hemlok_Icon.png/revision/latest?cb=20190906030113"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784132711645184/hem.png"
         },
         "R301":{
             "displayName":"R-301 Carbine",
@@ -44,7 +44,7 @@
             "RPM":"816",
             "magSize":"18/20/25/28",
             "reload":"2.4s/3.2s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/1b/R-301_Icon.png/revision/latest?cb=20190906030325"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785079832674394/r3.png"
         },
         "Flatline":{
             "displayName":"VK-47 Flatline",
@@ -53,7 +53,7 @@
             "RPM":"600",
             "magSize":"20/25/28/30",
             "reload":"2.4s/3.1s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/8/85/Flatline_Icon.png/revision/latest?cb=20190906030033&format=original"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784130070151188/flat.png"
         }
     },
 
@@ -66,7 +66,7 @@
             "RPM":"600",
             "magSize":"19/22/25/27",
             "reload":"1.9s/2.23s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/a/a1/Alternator_Icon.png/revision/latest?cb=20190906025909"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785233385095188/alt.png"
         },
         "Prowler":{
             "displayName":"Prowler Burst PDW",
@@ -75,7 +75,7 @@
             "RPM":"800",
             "magSize":"35",
             "reload":"2.0s/2.6s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/2/2d/Prowler_Icon.png/revision/latest?cb=20190906030306"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785291954618391/p.png"
         },
         "R99":{
             "displayName":"R-99 SMG",
@@ -84,7 +84,7 @@
             "RPM":"1,080",
             "magSize":"20/22/24/27",
             "reload":"1.8s/2.45s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/1b/R-99_Icon.png/revision/latest?cb=20190906030316"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785324674252800/r99.png"
         },
         "Volt":{
             "displayName":"Volt SMG",
@@ -93,7 +93,7 @@
             "RPM":"720",
             "magSize":"19/21/23/26",
             "reload":"1.6s/2.25s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/a/aa/Volt_Icon.png/revision/latest?cb=20190906030400"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785426788909076/vlt.png"
         }
     },
 
@@ -106,7 +106,7 @@
             "RPM":"900",
             "magSize":"36/40/44/48",
             "reload":"2.8s/3.63s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/5f/Devotion_Icon.png/revision/latest?cb=20190906030012"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785534804688906/devo.png"
         },
         "Lstar":{
             "displayName":"L-STAR EMG",
@@ -115,7 +115,7 @@
             "RPM":"600",
             "magSize":"Gauge",
             "reload":"1.15s/2.45s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/8/87/L-Star_Icon.png/revision/latest?cb=20190906030149"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784163020472370/ls.png"
         },
         "Spitfire":{
             "displayName":"M600 Spitfire",
@@ -124,7 +124,7 @@
             "RPM":"540",
             "magSize":"35/40/45/55",
             "reload":"3.2s/3.8s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f9/Spitfire_Icon.png/revision/latest?cb=20190906030341"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828785532074852352/sf.png"
         }
     },
 
@@ -137,7 +137,7 @@
             "RPM":"30",
             "magSize":"8",
             "reload":"3.6s/3.6s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Charge_Rifle_Icon.png/revision/latest?cb=20190906025957"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784165121294356/cr.png"
         },
         "Kraber":{
             "displayName":"Kraber .50-Cal Sniper",
@@ -146,7 +146,7 @@
             "RPM":"36",
             "magSize":"4",
             "reload":"3.2s/4.3s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b6/Kraber_Icon.png/revision/latest?cb=20190906030122"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784172759252992/kraber.png"
         },
         "Longbow":{
             "displayName":"Longbow DMR",
@@ -155,7 +155,7 @@
             "RPM":"86",
             "magSize":"6/8/10/12",
             "reload":"2.66s/3.66s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0c/Longbow_Icon.png/revision/latest?cb=20190906030133"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784167235354654/lb.png"
         },
         "Sentinel":{
             "displayName":"Sentinel",
@@ -164,7 +164,7 @@
             "RPM":"37.5",
             "magSize":"4/5/6/7",
             "reload":"2.5s/3.6s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/56/Sentinel_Icon.png/revision/latest?cb=20200205024357"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784168951087114/sen.png"
         },
         "Tripletake":{
             "displayName":"Triple Take",
@@ -173,7 +173,7 @@
             "RPM":"72",
             "magSize":"6/7/8/9",
             "reload":"2.6s/3.4s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e1/Triple_Take_Icon.png/revision/latest?cb=20190906030351"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784170964484126/tt.png"
         }
     },
 
@@ -186,7 +186,7 @@
             "RPM":"126",
             "magSize":"8",
             "reload":"2.75s/3.0s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/6c/Eva-8_Icon.png/revision/latest?cb=20190906030024"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784127577686036/eva.png"
         },
         "Peacekeeper":{
             "displayName":"Peacekeeper",
@@ -195,7 +195,7 @@
             "RPM":"58",
             "magSize":"5",
             "reload":"2.45s/3.35s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/7/71/Peacekeeper_Icon.png/revision/latest?cb=20190906030256"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784123505016862/pk.png"
         },
         "Mastiff":{
             "displayName":"Mastiff Shotgun",
@@ -204,7 +204,7 @@
             "RPM":"66",
             "magSize":"6",
             "reload":"1.03s/1.7s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9d/Mastiff_Icon.png/revision/latest?cb=20190906030212"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784126337351711/mast.png"
         },
         "Mozambique":{
             "displayName":"Mozambique Shotgun",
@@ -213,7 +213,7 @@
             "RPM":"180",
             "magSize":"4",
             "reload":"2.1s/2.6s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/de/Mozambique_Icon.png/revision/latest?cb=20190906030236"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784124898574346/mzbq.png"
         }
     },
 
@@ -226,7 +226,7 @@
             "RPM":"430",
             "magSize":"12/14/16/18",
             "reload":"1.25s/1.25s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/61/P2020_Icon.png/revision/latest?cb=20190906030246"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784120573853776/p20.png"
         },
         "Re45":{
             "displayName":"RE-45 Auto",
@@ -235,7 +235,7 @@
             "RPM":"750",
             "magSize":"16/19/22/25",
             "reload":"1.5s/1.95s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/bb/Re-45_Icon.png/revision/latest?cb=20190906030333"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784121995067422/re.png"
         },
         "Wingman":{
             "displayName":"Wingman",
@@ -244,7 +244,7 @@
             "RPM":"156",
             "magSize":"6/7/8/9",
             "reload":"2.1s/2.1s",
-            "imgUrl":"https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/35/Wingman_Icon.png/revision/latest?cb=20190906030408"
+            "imgUrl":"https://cdn.discordapp.com/attachments/828781149127966721/828784118778560532/wm.png"
         }
     }
 }

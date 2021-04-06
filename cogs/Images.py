@@ -6,6 +6,7 @@ import io
 import requests
 from PIL import Image, ImageEnhance, ImageOps
 
+
 def resize_image(image, new_width=100):
     width, height = image.size
     ratio = height / width
@@ -17,6 +18,10 @@ def resize_image(image, new_width=100):
 def grayscale(image):
     # luminance mode
     return image.convert("L")
+
+def invert(image):
+    return image.point(lambda p: 255 - p)
+    
 
 chars = ["@$%X*+;,. ","███▓▓▒▒░░ ","█▓▒░ ","$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft|()1{}[]?-_+~<>i!lI;:,^`. "]
 
@@ -31,8 +36,8 @@ class Images(commands.Cog):
 
     @commands.command(aliases=["asc","utf","unic","unc"])
     async def ascii(self, ctx, new_width=200, version=0):
-        """`ascii <width=200> <charset:0-3>` converts image attachment to ASCII, max:1000"""
-        if new_width > 1000:
+        """`ascii <width=200> <charset:0-3>` converts image attachment to ASCII, max:1024"""
+        if new_width > 1024:
             return await ctx.send(f"> {new_width}? I don't think so")
         if version > 3:
             version = 0
@@ -51,8 +56,10 @@ class Images(commands.Cog):
             await ctx.send(file=File(buf, filename=f"{ctx.author.display_name}_{new_width}x_ascii.txt"))
 
     @commands.command(aliases=["gsc", "gscale"])
-    async def grayscale(self, ctx):
+    async def grayscale(self, ctx, url=None):
         """`grayscale` converts image attachment to grayscale"""
+        if url == None:
+            url = ctx.message.attachments[0].url
         url = ctx.message.attachments[0].url
         img = Image.open(requests.get(url, stream=True).raw)
         img = grayscale(img)
@@ -61,9 +68,35 @@ class Images(commands.Cog):
             image_binary.seek(0)
             await ctx.send(file=discord.File(image_binary, filename='grayscale.png'))
 
+    @commands.command(aliases=["inv"])
+    async def invert(self, ctx, url=None):
+        """`invert` invert image attachment"""
+        if url == None:
+            url = ctx.message.attachments[0].url
+        img = Image.open(requests.get(url, stream=True).raw)
+        
+        if img.mode == "RGBA":
+            r, g, b, a = img.split()
+            r, g, b = map(invert, (r, g, b))
+            img = Image.merge(img.mode, (r, g, b, a))
+        elif img.mode == "RGB":
+            r, g, b = img.split()
+            r, g, b = map(invert, (r, g, b))
+            img = Image.merge(img.mode, (r, g, b))
+        elif img.mode == "L":
+            img = ImageOps.invert(img)
+        else:
+            return await ctx.send(f"{img.mode} mode is not currently supported")
+        with io.BytesIO() as image_binary:
+            img.save(image_binary, 'PNG')
+            image_binary.seek(0)
+            await ctx.send(file=discord.File(image_binary, filename='invert.png'))
+
     @commands.command(aliases=["destroy","df"])
-    async def deepfry(self, ctx):
+    async def deepfry(self, ctx, url=None):
         """`deepfry` deepfry image attachment"""
+        if url == None:
+            url = ctx.message.attachments[0].url
         url = ctx.message.attachments[0].url
         img = Image.open(requests.get(url, stream=True).raw)
         
@@ -72,7 +105,7 @@ class Images(commands.Cog):
         width, height = img.width, img.height
         img = img.resize((int(width ** .9), int(height ** .9)), resample=Image.BICUBIC)
         img = img.resize((int(width ** .88), int(height ** .88)), resample=Image.BILINEAR)
-        # destroys all legibility
+        # LINE OF DESTRUCTION
         # img = img.resize((int(width ** .75), int(height ** .75)), resample=Image.LANCZOS)
         img = img.resize((width, height), resample=Image.BICUBIC)
         img = ImageOps.posterize(img, 4)

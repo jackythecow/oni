@@ -30,7 +30,7 @@ def nextrank(score):
 class Apex(commands.Cog):
     def __init__(self, client):
         self.client = client
-        with open('data/weapons.txt') as file:
+        with open('data/apex/weapons.txt') as file:
             self.weapon = json.load(file)
         self.color = {
             "Energy": [

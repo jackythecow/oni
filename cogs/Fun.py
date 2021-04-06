@@ -3,6 +3,7 @@ from discord.ext import commands
 
 import random
 
+
 class Fun(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -13,11 +14,11 @@ class Fun(commands.Cog):
                      "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good",
                     "Very Doubtful"]
         
-    def _get_id_match(self):
-        return self._id_regex.match(self.argument)
+    # def _get_id_match(self):
+    #     return self._id_regex.match(self.argument)
 
     @commands.command(aliases=['dice'])
-    async def roll(self, ctx, *, integer=6):
+    async def roll(self, ctx, *, integer=100):
         """`roll <int>` rolls random value starting from 1 to [int]"""
         try:
             await ctx.send(
@@ -44,9 +45,13 @@ class Fun(commands.Cog):
     @commands.command(aliases=['pfp'])
     async def profilepicture(self, ctx):
         """`pfp [mentions]` sends mentioned profile picture"""
-        for member in ctx.message.mentions:
+        if not ctx.message.mentions:
             await ctx.send(embed=discord.Embed().set_image(
-                url=member.avatar_url))
+                url=ctx.author.avatar_url))
+        else:
+            for member in ctx.message.mentions:
+                await ctx.send(embed=discord.Embed().set_image(
+                    url=member.avatar_url))
 
     @commands.command(aliases=['choice'])
     async def choose(self, ctx, *, content: commands.clean_content):

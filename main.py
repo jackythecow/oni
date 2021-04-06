@@ -6,6 +6,8 @@ import sqlite3
 import aiohttp
 # from web_server import online
 
+DEFAULT = '.'
+
 def get_prefix(client, message):
     db = sqlite3.connect("main.sqlite")
     cursor = db.cursor()
@@ -13,7 +15,7 @@ def get_prefix(client, message):
     cursor.close()
     if prefix:
         return prefix
-    return '.'
+    return DEFAULT
 
 
 def get_num_members():
@@ -51,10 +53,10 @@ async def changeprefix(ctx, prefix):
     """``prefix [symbol]`` changes server's prefix"""
     db = sqlite3.connect("main.sqlite")
     cursor = db.cursor()
-    if prefix == '.':
+    if prefix == DEFAULT:
         cursor.execute(f"DELETE FROM main WHERE guild_id = {ctx.guild.id}")
     else:
-        sql = (f"INSERT INTO main(guild_id, prefix) VALUES(?,?)")
+        sql = ("INSERT INTO main(guild_id, prefix) VALUES(?,?)")
         val = (ctx.guild.id, prefix)
         cursor.execute(sql, val)
     db.commit()
@@ -87,6 +89,7 @@ async def on_ready():
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
+
 
 if __name__ == "__main__":
     # online()
