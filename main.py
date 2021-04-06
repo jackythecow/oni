@@ -81,6 +81,16 @@ async def status_task():
 
 @client.event
 async def on_ready():
+    # db = sqlite3.connect("main.sqlite")
+    # cursor = db.cursor()
+    # cursor.execute("""
+    # CREATE TABLE IF NOT EXISTS osuid (
+	# author_id TEXT NOT NULL UNIQUE,
+	# osu_id TEXT NOT NULL
+    # );
+    # """
+    # )
+
     client.aioSession = aiohttp.ClientSession()
     client.loop.create_task(status_task())
     print('We have logged in as {0.user}'.format(client))
