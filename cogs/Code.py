@@ -38,6 +38,12 @@ class Code(commands.Cog):
                 """+content.replace("```", "")+"}}"
         await self.run(ctx, "java", content)
 
+    @commands.command(aliases=["js"])
+    async def javascript(self, ctx, *, content: commands.clean_content):
+        """`javascript [code]` run java code, automatically add class and main"""
+        content = content.replace("```", "")
+        await self.run(ctx, "js", content)
+
     @commands.command()
     async def c(self, ctx, *, content: commands.clean_content):
         """`c [code]` run c code"""

@@ -5,6 +5,8 @@ import asyncio
 import itertools
 import sys
 import traceback
+import os
+from pathlib import Path
 from async_timeout import timeout
 from functools import partial
 from youtube_dl import YoutubeDL
@@ -25,7 +27,7 @@ ytdl_options = {
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
-        'preferredquality': '192',
+        'preferredquality': '320',
     }],
     'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
     'audioformat': 'mp3',
@@ -33,11 +35,10 @@ ytdl_options = {
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
-    'source_address': '0.0.0.0'
+    'source_address': '0.0.0.0',
+    'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',    
+                  'options': '-vn'
 }
-
-ffmpeg_options = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',    
-                  'options': '-vn'}
 
 ytdl = YoutubeDL(ytdl_options)
 
@@ -72,6 +73,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
         if download:
             source = ytdl.prepare_filename(data)
+            source = Path(source).with_suffix(".mp3")
         else:
             return {'webpage_url': data['webpage_url'], 'requester': ctx.author, 'title': data['title']}
 
@@ -92,8 +94,6 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
 class MusicPlayer:
     """makes queues and loops for different guilds"""
-
-    __slots__ = ('bot', '_guild', '_channel', '_cog', 'queue', 'next', 'current', 'np', 'volume')
 
     def __init__(self, ctx):
         self.bot = ctx.bot
@@ -119,7 +119,7 @@ class MusicPlayer:
 
             try:
                 # Wait for the next song. If we timeout cancel the player and disconnect...
-                async with timeout(300):  # 5 minutes...
+                async with timeout(600):  # 5 minutes...
                     source = await self.queue.get()
             except asyncio.TimeoutError:
                 if self in self._cog.players.values():
@@ -149,6 +149,16 @@ class MusicPlayer:
 
             try:
                 # We are no longer playing this song
+                with YoutubeDL(ytdl_options) as ydl:
+                    info = ydl.extract_info(source.web_url, download=False)
+                    filename = Path(ydl.prepare_filename(info)).with_suffix(".mp3")
+                    try:
+                        if os.path.exists(filename):
+                            os.remove(filename)
+                        else:
+                            pass
+                    except Exception as E:
+                        print(E)
                 await self.np.delete()
             except discord.HTTPException:
                 pass
@@ -175,7 +185,8 @@ class Music(commands.Cog):
 
         try:  
             for entry in self.players[guild.id].queue._queue:
-                if isinstance(entry, YTDLSource): 
+                if isinstance(entry, YTDLSource):
+                    entry.__getitem__
                     entry.cleanup()
             self.players[guild.id].queue._queue.clear()
         except KeyError:
@@ -244,9 +255,10 @@ class Music(commands.Cog):
 
         await ctx.send(f'Connected to: `{channel}`', delete_after=20)
 
-    @commands.command(aliases=['stream'])
+
+    @commands.command(aliases=["stream"])
     async def play(self, ctx, *, search: str):
-        """`play [url/search]` request a song and add it to the queue
+        """`play [url/search]` stream a song, may end abruptly because google
         join voice channel if availible
         YTDL to search and get song
         """
@@ -261,6 +273,23 @@ class Music(commands.Cog):
 
         await player.queue.put(source)
 
+    @commands.command(hidden=True)
+    async def download(self, ctx, *, search: str):
+        """`download [url/search]` download and play song, may take a long time
+        join voice channel if availible
+        YTDL to search and get song
+        """
+        vc = ctx.voice_client
+
+        if not vc:
+            await ctx.invoke(self.connect)
+
+        player = self.get_player(ctx)
+
+        source = await YTDLSource.create_source(ctx, search, loop=self.bot.loop, download=True)
+
+        await player.queue.put(source)
+        
     @commands.command()
     async def pause(self, ctx):
         """`pause` pauses current song"""
