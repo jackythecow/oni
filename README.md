@@ -7,15 +7,15 @@ A discord bot written in python using the [discord.py](https://github.com/Rapptz
 `Suggestions appreciated`
 ### Apex
 Basic stat gathering and display for Apex Legends
-### Audio ``TESTING``
+### Audio ``BETA``
 Audio playback functionality
 ### Code ``TESTING``
 multi-language code executer through the use of EMKC's piston API
-### Fun ``WIP``
+### Fun
 Random miscellaneous commands
-### Images ``WORKING``
+### Images
 Images processing commands
-### Management ``WIP``
+### Management
 Tools to manage the server
 ### Stocks ``BASIC``
 quickly check stocks and display some basic information
