@@ -5,10 +5,17 @@ A discord bot written in python using the [discord.py](https://github.com/Rapptz
 
 ## Extensions ``"TODO LIST"``
 `Suggestions appreciated`
-### Audio ``TESTING``
+### Apex
+Basic stat gathering and display for Apex Legends
+### Audio ``BETA``
 Audio playback functionality
-### Fun ``WIP``
-Basic miscellaneous commands
-### Management ``WIP``
+### Code ``TESTING``
+multi-language code executer through the use of EMKC's piston API
+### Fun
+Random miscellaneous commands
+### Images
+Images processing commands
+### Management
 Tools to manage the server
-### Stocks ``WIP``
+### Stocks ``BASIC``
+quickly check stocks and display some basic information
